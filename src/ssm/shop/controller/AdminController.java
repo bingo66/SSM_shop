@@ -60,9 +60,9 @@ public class AdminController {
 		}
 		return "/admin/adminAccount/loginResult";
 	}
-	
+
 	/*
-	 * 查询订单
+	 * 查询订 单
 	 */
 	@RequestMapping("/getAllOrder")
 	public String getAllOrder(Map<String, Object> map) {
