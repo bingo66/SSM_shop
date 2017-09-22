@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import ssm.shop.entity.Goods;
 import ssm.shop.service.CartService;
-/*
- * 购物车的控制器
- */
+
 @Controller
 @RequestMapping("/cart")
 public class CartController {
