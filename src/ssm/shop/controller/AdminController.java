@@ -62,7 +62,7 @@ public class AdminController {
 	}
 
 	/*
-	 * 查询订 单
+	 * 查询 订 单
 	 */
 	@RequestMapping("/getAllOrder")
 	public String getAllOrder(Map<String, Object> map) {
