@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.shop.dao.UserDao">
+
+	<insert id="insertUser">
+		insert into
+		shop_user(user_name,user_password,user_phone,user_address)
+		values(#{userName},#{userPassword},#{userPhone},#{userAddress})
+	</insert>
+
+	<select id="getUserByName" resultType="user">
+		select * from shop_user
+		where user_name = #{userName}
+	</select>
+
+	<select id="login" resultType="user">
+		select * from shop_user where
+		user_name=#{userName} and user_password = #{userPassword}
+	</select>
+
+	<select id="getOrder" resultType="order">
+		select * from shop_order where
+		user_id = #{userId}
+	</select>
+	<select id="getGoods" resultType="Goods">
+		select * from shop_goods where
+		goods_id = #{goodsId}
+	</select>
+	<select id="getOrderItem" resultType="orderItem">
+		select * from
+		shop_orderItem where order_id = #{orderId}
+	</select>
+</mapper>

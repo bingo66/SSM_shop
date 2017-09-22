@@ -1,0 +1,31 @@
+/*sellerindex.html*/
+.sellertable{
+	border:1px solid #202020;
+}
+.sellertable td{
+	border:1px solid #202020;
+}
+.seller_logo{
+	 background-color:rgb(237,28,36);
+}
+.seller_top{
+	height:50px;
+	background-color:#4D4D4D;color:#fff;
+	text-align: right;
+	padding-right: 30px;
+}
+.seller_top span{
+	font-size: 15px;
+	font-family:"微软雅黑";
+	line-height: 50px;
+}
+
+#clock{
+	font-size: 20px;
+	font-family: "微软雅黑";
+	margin-right: 20px;
+
+}
+.seller_item div:hover{
+	background-color: rgb(237,28,36);
+}

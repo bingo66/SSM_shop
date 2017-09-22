@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ssm.shop.dao.AdminDao">
+	<select id="getAllOrder" resultType="order">
+		select * from shop_order
+	</select>
+	<select id="getOrderItem" resultType="orderItem">
+		select * from
+		shop_orderItem where order_id = #{orderId}
+	</select>
+	<select id="getGoods" resultType="Goods">
+		select * from shop_goods where
+		goods_id = #{goodsId}
+	</select>
+	<select id="Login" resultType="admin">
+		select * from shop_admin where
+		admin_name = #{adminName} and admin_password = #{adminPassword}
+	</select>
+	<select id="selectAllGoods" resultType="goods">
+		select * from shop_goods
+	</select>
+	<select id="selectNoPayedOrder" resultType="order">
+		select * from
+		shop_order where order_state = '1'
+	</select>
+	<select id="selectPayedOrder" resultType="order">
+		select * from
+		shop_order where order_state = '2'
+	</select>
+	<insert id="insertGoods">
+		insert into
+		shop_goods(goods_name,goods_picture,goods_price)values(#{goodsName},#{goodsPicture},#{goodsPrice})
+	</insert>
+	<delete id="removeGoods">
+		delete from shop_goods where goods_id = #{goodsId}
+	</delete>
+	<update id="editGoods">
+		update shop_goods set goods_name =
+		#{goodsName},goods_price = #{goodsPrice} where goods_id = #{goodsId}
+	</update>
+</mapper>
