@@ -8,6 +8,7 @@ import ssm.shop.entity.Order;
 import ssm.shop.entity.OrderItem;
 
 public interface AdminDao {
+	//获取所有订单
 	List<Order> getAllOrder();
 
 	List<OrderItem> getOrderItem(Integer orderId);
