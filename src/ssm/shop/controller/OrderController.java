@@ -23,7 +23,9 @@ import ssm.shop.entity.Order;
 import ssm.shop.entity.OrderItem;
 import ssm.shop.entity.User;
 import ssm.shop.service.OrderService;
-
+/*
+ * 订单的控制类
+ */
 @Controller
 @RequestMapping("/order")
 public class OrderController {
@@ -37,8 +39,10 @@ public class OrderController {
 	public String msg() {
 
 		return "/order/msg";
-	}
-
+	}	
+	/*
+	 * 创建订单
+	 */
 	@RequestMapping("/createOrder")
 	public String createOrder(double price, HttpSession session) {
 		User user = (User) session.getAttribute("user");
@@ -62,7 +66,9 @@ public class OrderController {
 		session.removeAttribute("cart");
 		return "redirect:/user/personalInfo";
 	}
-
+	/*
+	 * 展示订单
+	 */
 	@RequestMapping("/showOrder")
 	public String showOrder(Map<String, Object> map, HttpSession session) {
 		User user = (User) session.getAttribute("user");
@@ -74,7 +80,9 @@ public class OrderController {
 		}
 		return "/admin/main";
 	}
-
+	/*
+	 * 支付
+	 */
 	@RequestMapping("/pay")
 	public void pay(Integer orderId, HttpServletResponse resp, HttpServletRequest req) throws IOException {
 		orderService.pay(orderId);
@@ -86,14 +94,18 @@ public class OrderController {
 		out.println("</script>");
 		out.println("</html>");
 	}
-
+	/*
+	 * 发货
+	 */
 	@RequestMapping("/sendGoods")
 	public String sendGoods(Integer orderId) throws IOException {
 		orderService.sendGoods(orderId);
 
 		return "redirect:/admin/getAllOrder";
 	}
-
+	/*
+	 * 确认订单
+	 */
 	@RequestMapping("confirm")
 	public void confirm(Integer orderId, HttpServletResponse resp, HttpServletRequest req) throws IOException {
 		orderService.confirm(orderId);
