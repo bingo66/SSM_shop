@@ -1,6 +1,8 @@
 package ssm.shop.entity;
 
-
+/*
+ * 订单类
+ */
 import java.util.List;
 
 import org.springframework.stereotype.Component;

@@ -1,7 +1,9 @@
 package ssm.shop.entity;
 
 import org.springframework.stereotype.Component;
-
+/*
+ * 订单详情
+ */
 @Component
 public class OrderItem {
 	private Integer orderId;
