@@ -1,7 +1,9 @@
 package ssm.shop.entity;
 
 import org.springframework.stereotype.Component;
-
+/*
+ * 管理员实体类
+ */
 @Component
 public class Admin {
 	private Integer adminId;

@@ -8,7 +8,9 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import ssm.shop.entity.Admin;
-
+/*
+ * 后台管理的拦截器
+ */
 public class AdminInterceptor implements HandlerInterceptor{
 
 	@Override

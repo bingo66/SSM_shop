@@ -9,7 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ssm.shop.entity.User;
 
-
+/*
+ * 先登录后才能下单
+ */
 public class OrderInterceptor implements HandlerInterceptor {
 
 	@Override

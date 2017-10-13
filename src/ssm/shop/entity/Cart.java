@@ -1,5 +1,7 @@
 package ssm.shop.entity;
-
+/*
+ * 购物车实体类
+ */
 public class Cart {
 
 	private int count;
